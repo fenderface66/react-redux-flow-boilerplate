@@ -1,4 +1,7 @@
-export type Props = {};
+export type Props = {
+  initiateApp: () => void;
+  appInitiated: boolean;
+};
 
 export const actionKeys = {
   INITIATE_APP: 'INITIATE_APP',
