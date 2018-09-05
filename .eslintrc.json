@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "react-app",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "plugins": ["jsx-a11y", "eslint-plugin-prettier"]
+}
