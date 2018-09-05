@@ -14,7 +14,7 @@ class App extends Component<Props> {
   }
   renderAppInitiatedText() {
     if (this.props.appInitiated) {
-      return `<h2>APP INTITIATED</h2>`;
+      return <h2>APP INTITIATED</h2>;
     }
     return null;
   }
