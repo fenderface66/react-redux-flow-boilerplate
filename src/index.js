@@ -8,8 +8,7 @@ import registerServiceWorker from "./registerServiceWorker";
 
 const root: ?Element = document.getElementById("root");
 
-if (root != null) {
-  ReactDOM.render(
+if (root != null) {ReactDOM.render(
     <Provider store={configureStore()}>
       <App />
     </Provider>,
