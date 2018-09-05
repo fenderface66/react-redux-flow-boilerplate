@@ -9,7 +9,9 @@ import { initiateApp } from "./actions";
 import "./App.css";
 
 class App extends Component<Props> {
-  componentDidMount() { this.props.initiateApp();}
+  componentDidMount() {
+    this.props.initiateApp();
+  }
   renderAppInitiatedText() {
     if (this.props.appInitiated) {
       return `<h2>APP INTITIATED</h2>`;
