@@ -1,12 +1,12 @@
 // @flow
 
-import React, { Component } from "react";
-import type { Dispatch } from "redux";
-import { connect } from "react-redux";
-import logo from "../../logo.svg";
-import { type Props } from "./types";
-import { initiateApp } from "./actions";
-import "./App.css";
+import React, { Component } from 'react';
+import type { Dispatch } from 'redux';
+import { connect } from 'react-redux';
+import logo from '../../logo.svg';
+import { type Props } from './types';
+import { initiateApp } from './actions';
+import './App.css';
 
 class App extends Component<Props> {
   componentDidMount() {
@@ -35,11 +35,14 @@ class App extends Component<Props> {
 }
 
 const mapStateToProps = state => ({
-  appInitiated: state.app.appInitiated,
+  appInitiated: state.app.appInitiated
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<*>):Object => ({
-  initiateApp: () => dispatch(initiateApp()),
+const mapDispatchToProps = (dispatch: Dispatch<*>): Object => ({
+  initiateApp: () => dispatch(initiateApp())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

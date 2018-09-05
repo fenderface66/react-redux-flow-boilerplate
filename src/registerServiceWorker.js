@@ -8,10 +8,8 @@
 // To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
 // This link also includes instructions on opting out of this behavior.
 
-const PUBLIC_URL: string = process.env.PUBLIC_URL != null
-  ? process.env.PUBLIC_URL
-  : '';
-
+const PUBLIC_URL: string =
+  process.env.PUBLIC_URL != null ? process.env.PUBLIC_URL : '';
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
@@ -68,7 +66,10 @@ function registerValidSW(swUrl) {
           const installingWorker = registration.installing;
           installingWorker.onstatechange = () => {
             if (installingWorker.state === 'installed') {
-              if (navigator.serviceWorker != null && navigator.serviceWorker.controller) {
+              if (
+                navigator.serviceWorker != null &&
+                navigator.serviceWorker.controller
+              ) {
                 // At this point, the old content will have been purged and
                 // the fresh content will have been added to the cache.
                 // It's the perfect time to display a "New content is
@@ -95,11 +96,9 @@ function checkValidServiceWorker(swUrl) {
   fetch(swUrl)
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
-      let contentTypeIsWrong = response.headers.get('content-type') !== 'javascript';
-      if (
-        response.status === 404 ||
-        contentTypeIsWrong
-      ) {
+      let contentTypeIsWrong =
+        response.headers.get('content-type') !== 'javascript';
+      if (response.status === 404 || contentTypeIsWrong) {
         // No service worker found. Probably a different app. Reload the page.
         if (navigator.serviceWorker != null) {
           navigator.serviceWorker.ready.then(registration => {
