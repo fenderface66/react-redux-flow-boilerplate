@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import logo from "../../logo.svg";
 import { type Props } from "./types";
 import { initiateApp } from "./actions";
-import "./App.css";
+import AppWrapper from "./App.style";
 
 class App extends Component<Props> {
   componentDidMount() {
@@ -20,7 +20,7 @@ class App extends Component<Props> {
   }
   render() {
     return (
-      <div className="App">
+      <AppWrapper>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
@@ -29,7 +29,7 @@ class App extends Component<Props> {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         {this.renderAppInitiatedText()}
-      </div>
+      </AppWrapper>
     );
   }
 }
