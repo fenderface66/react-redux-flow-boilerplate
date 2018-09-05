@@ -1,4 +1,4 @@
-import { type Action, type State, actionKeys } from './types';
+import { type Action, type State, actionKeys } from "./types";
 
 const initialState = {
   appInitiated: false

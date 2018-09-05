@@ -1,4 +1,4 @@
-import { type InitiateApp, actionKeys } from './types';
+import { type InitiateApp, actionKeys } from "./types";
 
 export const initiateApp = (): InitiateApp => {
   return {
